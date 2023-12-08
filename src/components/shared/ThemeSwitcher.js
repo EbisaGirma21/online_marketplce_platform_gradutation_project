@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { FaCloudMoon } from "react-icons/fa";
+import { IoMdSunny } from "react-icons/io";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -16,9 +18,14 @@ const ThemeSwitcher = () => {
 
   return (
     <div>
-      <button onClick={() => setTheme("light")}>🔆</button>
-      <button onClick={() => setTheme("dark")}>🌙</button>
-      <div style={theme === "light" ? { left: "2px" } : { right: "2px" }} />
+      <button
+        className={`border border-jade bg-white  p-2 rounded-full dark:bg-papagreend text-jade`}
+        onClick={() =>
+          theme === "dark" ? setTheme("light") : setTheme("dark")
+        }
+      >
+        {theme === "dark" ? <IoMdSunny /> : <FaCloudMoon />}
+      </button>
     </div>
   );
 };

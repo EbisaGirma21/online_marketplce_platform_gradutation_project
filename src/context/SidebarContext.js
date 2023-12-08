@@ -11,9 +11,8 @@ export const SidebarProvider = ({ children }) => {
   };
 
   return (
-    <SidebarContext.Provider value={{ toggle, sidebarMode }}>
+    <SidebarContext.Provider value={{ toggle, sidebarMode }} attribute="class">
       <div>{children}</div>
     </SidebarContext.Provider>
   );
 };
-i

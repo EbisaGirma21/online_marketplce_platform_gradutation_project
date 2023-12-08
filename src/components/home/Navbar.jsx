@@ -48,7 +48,7 @@ const Navbar = () => {
       }`}
     >
       <Link href="/">OMP</Link>
-      <div className="flex ">
+      <div className="flex gap-4">
         {links.map((link) => (
           <Link key={link.id} href={link.url}>
             {link.title}
